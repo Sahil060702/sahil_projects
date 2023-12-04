@@ -1,0 +1,16 @@
+#x=[1,2,3,4,5,6]
+#x.append(7)
+#print(x[3])
+#x.remove(6)
+#y=x.copy()
+#print(x)
+#print(y)
+#y=x.copy()
+#print(y)
+#x.reverse()
+#print(x)
+#x.sort()
+#print(x)
+list=[1,2,3,[4,5],6]
+#print(list)
+print(list[3][1])
