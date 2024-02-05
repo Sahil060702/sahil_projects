@@ -1,0 +1,109 @@
+{%include 'core/navbar.html'%}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePlus|Products</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'core/images/oneplus_favi.ico' %}">
+    <!--<link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">-->
+    <link rel="stylesheet" href="{% static 'core/css/clientlib.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/home_navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/products.css' %}">
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HW9RGK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    
+    <style>
+        body {
+            font-family: 'Lato';
+            font-size: 22px;
+        }
+        </style>
+
+</head>
+<body>
+<!--Marquee scroling text-->
+<div class="scrolling-text">
+    <p class="scrolling-text">
+    Relentless innovation defines who we are.
+    Unlock exclusive benefits, early access to products, and unique experiences.
+    </p>
+</div>
+<div>
+    <h1 class="headings">
+        Never settle for anything less.
+    </h1>
+</div>
+<br>
+<!--Cards and content-->
+<div><h2 class="headings">Our execlusive bundles.</h2></div>
+<div class="card-container">
+    <div class="card">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/Gaming_bundle.png' %}" alt="OnePlus|Gaming-Bundle">
+        <h2>OnePlus Cool Gaming Bundle</h2>
+    </div>
+
+    <div class="card">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/Charging_bundle.png' %}" alt="OnePlus|Charging-Bundle">
+        <h2>OnePlus Easy Charging Bundle</h2>
+    </div>
+
+    <div class="card">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/Music_bundle.png' %}" alt="OnePlus|Music-Bundle">
+        <h2>OnePlus Connect to Music Bundle</h2>
+    </div>
+</div>
+
+<!--Cards and content set2-->
+<div class="d2">
+<br><br>
+<div><h1 class="heading2">Our Flagships</h1></div>
+<div class="card-container ">
+    <div class="card2">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/12r.png' %}" alt="OnePlus|12r-5g">
+        <h2>OnePlus 12R</h2>
+    </div>
+
+    <div class="card2">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/11r.png' %}" alt="OnePlus|11r-5g">
+        <h2>OnePlus 11R 5G</h2>
+    </div>
+
+    <div class="card2">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/OnePlus11_5g.png' %}" alt="OnePlus|11-5g">
+        <h2>OnePlus 11 5G</h2>
+    </div>
+</div>
+</div>
+
+<!--Cards and content set3-->
+<br>
+<div><h1 class="headings">Tablets</h1></div>
+<div class="card-container">
+    <div class="card">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/pad-nav.png' %}" alt="OnePlus|Pad">
+        <h2>OnePlus Pad</h2>
+    </div>
+
+    <div class="card">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/pad_go.png' %}" alt="OnePlus|Pad Go">
+        <h2>OnePlus Pad Go</h2>
+    </div>
+
+    <div class="card">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/padacc.png' %}" alt="OnePlus|Pad Folio">
+        <h2>OnePlus Go Folio Case</h2>
+    </div>
+</div>
+{%include 'core/footer.html'%}
+</body>

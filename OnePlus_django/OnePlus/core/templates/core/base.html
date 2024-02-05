@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePlus</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'core/images/oneplus_favi.ico' %}">
+    <!--<link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">-->
+    <link rel="stylesheet" href="{% static 'core/css/clientlib.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/home_navbar.css' %}">
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HW9RGK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    
+    <style>
+        body {
+            font-family: 'Lato';font-size: 22px;
+        }
+        </style>
+
+</head>
+<body>
+<!--Navbar-->
+    {%include 'core/navbar.html'%}
+
+<!--Full page image-->
+<div class="full-page-container">
+    <img class="background-image" src="{% static 'core/images/12r.webp' %}"alt="Background Image">
+    <div class="overlay-text">
+      <h1>OnePlus 12 Series</h1>
+      <p>Brand new top notch flagship series</p>
+      <p>for those who go one step further.</p>
+    </div>
+</div>
+
+<!--Cards and content-->
+<div class="card-container">
+    <div class="card">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/OnePlus-Open1.jpg' %}" alt="OnePlus|Open">
+        <h2>OnePlus-Open</h2>
+        <p>It's Pro sizing on a fold.</p>
+    </div>
+
+    <div class="card">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/op-12.webp' %}" alt="OnePlus|Flagship-series">
+        <h2>Flagship-series</h2>
+        <p>As unique as you</p>
+    </div>
+
+    <div class="card">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/op-nord1.webp' %}" alt="OnePlus|Nord-series">
+        <h2>Nord-series</h2>
+        <p>A little more than you'd expect</p>
+    </div>
+</div>
+
+<!--Full page image-->
+<div class="full-page-container">
+    <img class="background-image" src="{% static 'core/images/rcc.webp' %}" alt="Background Image">
+    <div class="overlay-text">
+      <h1>Join Red Cable Club!!</h1>
+      <p>It all started with the first red cable.</p>
+      <p>Sign up with your OnePlus account.</p>
+    </div>
+</div>
+
+<!--Cards and content-->
+<div class="card-container">
+    <div class="card">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/buds-pro2.png' %}" alt="OnePlus|Buds-Pro2">
+        <h2>OnePlus Buds Pro 2</h2>
+    </div>
+
+    <div class="card">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/nord-buds.png' %}" alt="OnePlus|Flagship-series">
+        <h2>OnePlus Nord Buds 2</h2>
+    </div>
+
+    <div class="card">
+        <!-- Card content goes here -->
+        <img src="{% static 'core/images/bullets-z2.png' %}" alt="OnePlus|Nord-series">
+        <h2>OnePlus Bullets Wireless Z2</h2>
+    </div>
+</div>
+
+{%include 'core/footer.html'%}
+</body>
+</html>

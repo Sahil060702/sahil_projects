@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/*Navbar*/
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
+/*Navbar*/
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/*Navbar*/
+nav a:hover {
+  background-color: #333;
+  color: red;
+}
+
+/*.logo {
+  background-color: #333;
+  display: block;
+  float: left;
+}
+*/
+/*Navbar content LHS*/
+.nav-left{
+  float: left;
+}
+/*Navbar content RHS*/
+.nav-right {
+  float: right;
+}
+
+/*Full page image*/
+.full-page-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  transform: translate(-30%, -70%);
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Flex container */
+.card-container {
+  display: flex;
+  justify-content: space-between; 
+}
+
+/* Individual card styles */
+.card {
+  width: 30%; 
+  background-color:white;
+  border-style: hidden;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  
+}
+
+/* Image styles */
+.card img {
+  width: 100%; /* Make the image fill the container */
+  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+}
+
+/*To make images inside card hover*/
+.card:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/*Footer content*/
+.footer {
+  background-color: black;
+  color: #fff;
+  padding: 5px ;
+  text-align: center;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  color: #fff;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons li {
+  margin: 0 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}

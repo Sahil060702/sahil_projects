@@ -1,0 +1,93 @@
+/*Marquee scroling text*/
+.scrolling-text {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 20s linear infinite;
+    color: red;
+    font-size: 25px;
+  }
+
+@keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+.headings{
+    text-align: center;
+}
+
+.d2{
+    background-color: black;
+}
+
+.heading2{
+    color:white;
+    text-align: center;
+}
+/* Flex container */
+.card-container {
+    display: flex;
+    justify-content: space-between; 
+ }
+
+/* Individual card styles */
+.card {
+    width: 30%; 
+    background-color:white;
+    border-style: hidden;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+
+
+/* Image styles */
+.card img {
+    width: 100%; /* Make the image fill the container */
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+}
+
+/*To make images inside card hover*/
+.card:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Flex container set2*/
+.card2-container {
+    display: flex;
+    justify-content: space-between; 
+ }
+/* Individual card styles for set2*/
+.card2{
+    width: 30%; 
+    background-color:black;
+    border-style: hidden;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    
+}
+
+/* Image styles set2 */
+.card2 img {
+    width: 100%; /* Make the image fill the container */
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+}
+
+/*To make images inside card hover se2*/
+.card2:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
