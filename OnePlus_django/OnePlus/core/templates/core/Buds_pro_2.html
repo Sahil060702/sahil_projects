@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePlus | Buds-Pro2</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'core/images/oneplus_favi.ico' %}">
+    <!--<link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">-->
+    <link rel="stylesheet" href="{% static 'core/css/clientlib.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/home_navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/specification.css' %}">
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HW9RGK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    
+    <style>
+        body {
+            font-family: 'Lato';font-size: 22px;
+        }
+        </style>
+
+</head>
+<body>
+<!--Navbar-->
+{%include 'core/navbar.html'%}
+<!--Product specifications-->
+<div class="container">
+    <div class="product">
+      <div class="product-image">
+        <img src="{% static 'core/images/buds-pro2.png' %}" alt="Buds-Pro2">
+      </div>
+      <div class="product-details">
+        <h1>OnePlus Buds Pro 2</h1>
+        <br>
+        <p>Unlock the true harmony</p>
+        <p>Up to 48dB Adaptive Noise Cancellation</p>
+        <p>MelodyBoostTM Dual Drivers</p>
+        <p>Up to 39 Hours of Playback</p>
+        <p>Fast Charge(upto 35 watts)</p>
+        <br>
+        <div class="product-price">Price:₹9,999</div>
+        <div class="specifications">
+          <h2>Specifications</h2>
+          <table>
+            <tr>
+              <th>Personalized Audio Experience</th>
+            </tr>
+            <tr>
+                <th>Hi-Res Audio</th>
+            </tr>
+
+            <tr>
+                <th>Google Fast Pair</th>
+            </tr>
+
+            <tr>
+                <th>94ms Low Latency</th>
+            </tr>
+            <!-- Add more specifications as needed -->
+          </table>
+        </div>
+        <button class="add-to-cart-button">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+ 
+<!--Footer-->
+{%include 'core/footer.html'%}
+</body>

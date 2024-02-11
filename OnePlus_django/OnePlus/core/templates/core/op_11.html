@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePlus | 11 5G</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'core/images/oneplus_favi.ico' %}">
+    <!--<link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">-->
+    <link rel="stylesheet" href="{% static 'core/css/clientlib.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/home_navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/specification.css' %}">
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HW9RGK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    
+    <style>
+        body {
+            font-family: 'Lato';font-size: 22px;
+        }
+        </style>
+
+</head>
+<body>
+<!--Navbar-->
+{%include 'core/navbar.html'%}
+<!--Product specifications-->
+<div class="container">
+    <div class="product">
+      <div class="product-image">
+        <img src="{% static 'core/images/OnePlus11_5g.png' %}" alt="11-5g">
+      </div>
+      <div class="product-details">
+        <h1>OnePlus 11 5G</h1>
+        <br>
+        <p>120Hz 2K Super Fluid Amoled Display with Dolby Vision</p>
+        <p>Dual "Reality" Speakers with Dolby Atmos</p>
+        <p>5000mAh Battery + 100W SUPERVOOC Fast Charging</p>
+        <p>Snapdragon® 8+ Gen2</p>
+        <p>Upto 16Gb Ram</p>
+        <br>
+        <div class="product-price">Price:₹56,999</div>
+        <div class="specifications">
+          <h2>As unique as you</h2>
+          <table>
+            <tr>
+              <th>3rd Generation Hasselblad Camera for Mobile </th>
+            </tr>
+            <tr>
+                <th>Qualcomm Snapdragon® 8Gen2</th>
+            </tr>
+
+            <tr>
+                <th>Upto 16Gb LPDDR5X Ram</th>
+            </tr>
+
+            <tr>
+                <th>Super Fast UFS 4.0 Storage</th>
+            </tr>
+            <!-- Add more specifications as needed -->
+          </table>
+        </div>
+        <button class="add-to-cart-button">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+ 
+<!--Footer-->
+{%include 'core/footer.html'%}
+</body>

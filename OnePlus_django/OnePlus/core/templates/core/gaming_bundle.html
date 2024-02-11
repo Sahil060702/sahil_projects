@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePlus | Gaming-Bundle</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'core/images/oneplus_favi.ico' %}">
+    <!--<link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">-->
+    <link rel="stylesheet" href="{% static 'core/css/clientlib.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/home_navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/bundle.css' %}">
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HW9RGK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    
+    <style>
+        body {
+            font-family: 'Lato';font-size: 22px;
+        }
+        </style>
+
+</head>
+<body>
+<!--Navbar-->
+{%include 'core/navbar.html'%}
+<!--Product specifications-->
+<div class="container">
+    <div class="product">
+      <div class="product-image">
+        <img src="{% static 'core/images/Gaming_bundle.png' %}" alt="Gaming-Bundle">
+      </div>
+      <div class="product-details">
+        <h1>
+          OnePlus Cool Gaming Bundle</h1>
+        <br>
+        <div class="specifications">
+          <h2>Includes</h2>
+          <table>
+            <tr>
+              <th><li>Gaming Trigger</li></th>
+            </tr>
+            <tr>
+                <th><li>Phone Cooler</li></th>
+            </tr>
+          </table>
+        <br>
+        <h2>For Coolest Gaming Experience</h2>
+        <br>
+        <p>OnePlus Gaming Triggers
+          Today, mobile games play an integral part in the lifestyle of youth.
+          During the design process of the OnePlus Gaming Trigger we specifically targeted 
+          players of Battle Royale-style multiplayer mobile games including PUBG, Call of Duty,
+          Free Fire, and more.We included the following features will help you up your 
+          game and win the match.
+        </p>
+
+        <br>
+        <div class="product-price">Price:₹3,699</div>
+
+        </div>
+        <button class="add-to-cart-button">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+ 
+<!--Footer-->
+{%include 'core/footer.html'%}
+</body>
