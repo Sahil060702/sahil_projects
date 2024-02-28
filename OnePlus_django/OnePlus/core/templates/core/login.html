@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OnePlus | Account</title>
+    <title>OnePlus | Log-in</title>
     <link rel="icon" type="image/x-icon" href="{% static 'core/images/oneplus_favi.ico' %}">
     <!--<link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">-->
     <link rel="stylesheet" href="{% static 'core/css/clientlib.css' %}">
@@ -20,14 +20,14 @@
 
 </head>
 <body>
-<!--Navbar-->
-{%include 'core/navbar.html'%}
-    <h1>🕴️</h1> 
-    <h1>Login Successful {{name}}</h1>
-    <br>
-    <br>
-    <a href="/logout/"><input type="button" value="logout"></a>
-<!--Footer-->
-{%include 'core/footer.html'%}
+<h1>this is login page</h1>
+<form action="" method="POST" >
+    {% csrf_token %}
+    {{mf.as_p}}
+    <input type="submit" value="Login">
+</form>
+<br>
+<br>
+<a href="{% url "signup" %}"><input type="button" value="Sign up"></a>
 </body>
 </html>

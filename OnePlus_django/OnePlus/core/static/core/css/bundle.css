@@ -53,11 +53,9 @@
   }
   .specifications th, .specifications td {
     padding: 5px;
-    text-align: center;
+    text-align: left;
     font-size: 20px;
-    
   }
-
   .add-to-cart-button {
     background-color: #4CAF50;
     color: white;
@@ -66,7 +64,6 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-
     
   }
 
@@ -74,7 +71,7 @@
     background-color: red ;
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    margin-left: 30px;
+    
   }
 
 

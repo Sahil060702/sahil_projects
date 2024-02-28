@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OnePlus | Account</title>
+    <title>OnePlus | Sign-up</title>
     <link rel="icon" type="image/x-icon" href="{% static 'core/images/oneplus_favi.ico' %}">
     <!--<link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">-->
     <link rel="stylesheet" href="{% static 'core/css/clientlib.css' %}">
@@ -20,14 +20,19 @@
 
 </head>
 <body>
-<!--Navbar-->
-{%include 'core/navbar.html'%}
-    <h1>🕴️</h1> 
-    <h1>Login Successful {{name}}</h1>
-    <br>
-    <br>
-    <a href="/logout/"><input type="button" value="logout"></a>
-<!--Footer-->
-{%include 'core/footer.html'%}
+<h1>this is signup page</h1>
+<h1>Sign Up Form</h1>
+
+<form action="" method="POST" novalidate>
+    {% csrf_token %}
+    {% for f in mf %}
+        {{f.label_tag}} {{f}} {{f.errors|striptags}} <br><br> 
+    {% endfor %}
+    
+    <input type="submit" value="sign up">
+</form>
+<br>
+<br>
+<a href="/login/"><input type="button" value="Sign In"></a>
 </body>
 </html>

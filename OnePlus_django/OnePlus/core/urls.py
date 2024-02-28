@@ -23,6 +23,11 @@ urlpatterns=[
     path("pad_go/",views.pad_go),
     path("op_pad/",views.op_pad),
     path("folio_case/",views.folio_case),
+    #Urls for forms
+    path('signup/',views.sign_up, name='signup'),
+    path('login/',views.log_in,name='login'),
+    path('account/',views.account,name='account'),
+    path('logout/',views.log_out,name='logout'),
 
 
 ]
