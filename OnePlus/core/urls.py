@@ -1,5 +1,9 @@
 from django.urls import path
 from core import views
+#dYNAMIC
+from django.conf import settings
+from django.conf.urls.static import static
+# from . import views #sus
 
 urlpatterns=[
     path("",views.test),
@@ -28,6 +32,11 @@ urlpatterns=[
     path('login/',views.log_in,name='login'),
     path('account/',views.account,name='account'),
     path('logout/',views.log_out,name='logout'),
+    #Dynamic
+    path('productlist/',views.product_list,name="productlist"),
+    path('addtocart/<int:id>',views.add_to_cart)
+
+]+ static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-]
+

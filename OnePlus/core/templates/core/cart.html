@@ -22,7 +22,30 @@
 <body>
 <!--Navbar-->
 {%include 'core/navbar.html'%}
-    <h1>🛒</h1>
+<h1>Shopping Cart</h1>
+{% block content %}
+  <div class="row">
+    {% for product in products %}
+      <div class="col-md-3">
+        <div class="card">
+          <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <p class="card-text">${{ product.price }}</p>
+            <form method="post" action="{% url 'add_to_cart' %}">
+              {% csrf_token %}
+              <input type="hidden" name="product_id" value="{{ product.id }}">
+              <a href="{% url 'addtocart' product.id %}" class="btn btn-info my-2 mr-2">Add to cart</a> 
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
 <!--Footer-->
 {%include 'core/footer.html'%}
 </body>

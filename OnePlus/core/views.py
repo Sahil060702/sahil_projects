@@ -3,7 +3,11 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from .forms import SignupForm
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth import authenticate,login,logout 
+#Dynamic
+from django.views import View
+from . models import product,AddtoCart
+from django.urls import reverse
 
 # Create your views here.
 def test(request):
@@ -107,3 +111,21 @@ def log_out(request):
     logout(request)
     return redirect('/login/')
 
+#Dynamic class based view
+# class ProductCategoriesView(View):
+#     def get(self,request):
+#         product_catagory = product.objects.filter(category='Product')   
+#         return render(request,'core/dog_categories.html',{'dog_category':product_catagory})
+
+def product_list(request):
+    products = product.objects.all()
+    return render(request,'products_list.html', {'products': products})
+
+def add_to_cart(request,id):
+    if request.user.is_authenticated:
+        product = product.objects.get(pk=id)
+        user=request.user
+        AddtoCart(user=user,product=product).save() 
+        return redirect('cart',id)
+
+    

@@ -1,6 +1,8 @@
 {%include 'core/navbar.html'%}
 <!DOCTYPE html>
 {% load static %}
+{% block content %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,7 +39,7 @@
 </div>
 <br>
 <!--Cards and content-->
-<div><h2 class="headings">Our execlusive bundles.</h2></div>
+{% comment %} <div><h2 class="headings">Our execlusive bundles.</h2></div>
 <div class="card-container">
     <div class="card">
         <!-- Card content goes here -->
@@ -81,10 +83,10 @@
         <h2>OnePlus 11 5G</h2>
     </div>
 </div>
-</div>
+</div> {% endcomment %}
 
 <!--Cards and content set3-->
-<br>
+{% comment %} <br>
 <div><h1 class="headings">Tablets</h1></div>
 <div class="card-container">
     <div class="card">
@@ -104,7 +106,43 @@
         <a href="/folio_case"><img src="{% static 'core/images/padacc.png' %}" alt="OnePlus|Pad Folio"></a>
         <h2>OnePlus Go Folio Case</h2>
     </div>
+</div> {% endcomment %}
+<!--Dynamic-->
+<!--Cards with images -->
+{% comment %} <div class="card-container">
+    {% for p in products %} 
+    <div class="card col-sm-4" >
+        <!-- Card content goes here -->
+        <img src="{{wh.brand_image.url}}"alt="Series 7">
+        <h2>{{p.name}}</h2>
+        <h1>rs.{{wh.selling_price}} only/-</h1>
+    </div>
+    {% endfor %} 
 </div>
-{%include 'core/footer.html'%}
+{%include 'core/footer.html'%} {% endcomment %}
+
+
+<div class="card_container " style="margin-top: 50px;">                         <!-- we have created new container class-->
+    <div class="row">                           <!-- we have created row class-->
+        {% for p in product %}
+        <div class="col-sm-4 ">      
+            <div class="card bed_categories_card bed_card" style="width: 22rem; height:30rem">
+                <a href="{% url "watchdetails" p.id %}"><img class="card-img-top " src="{{p.brand_image.url}}" alt="Card image cap"></a>
+                <div class="card-body">
+                  <h2 class="card-title">{{p.name}}</h2>
+                  <h2 class="card-title">{{p.selling_price}} rs</h2>
+                   <div class="text-center">
+                        <h5 class="font-weight-bold text-dark "><i class="fa-solid fa-indian-rupee-sign"></i> <small class="fw-light rupee"> {{p.selling_price}}</small> <small class="text-danger">(% off)</small></h5> 
+                        
+                    </div>
+                </div>
+            </div>
+          </a>
+        </div>       
+        {% endfor %}
+    </div>
+  </div>
+
+{% endblock content%}
 </body>
 </html>
