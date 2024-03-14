@@ -1,0 +1,72 @@
+{% include 'core/navbar.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OnePlus</title>
+  <link rel="stylesheet" href="{% static 'core/css/card.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+<body>
+
+<div class="full-page-container">
+  <img class="background-image" src="{% static 'core/images/neversettle.gif' %}" alt="Background Image">
+    <div class="overlay-text">
+      <div class="scrolling-text">
+        <p class="scrolling_text">
+          Relentless innovation defines who we are.
+          Unlock exclusive benefits, early access to products, and unique experiences.
+        </p> 
+      </div>
+    </div> 
+</div>
+
+<div class="full-page-container">
+  <!--Smartphone division-->
+  <h1 align="center">Flagship Smartphones</h1>
+  <div class="container " style="margin-top: 50px;"><!-- we have created new container class-->
+    <div class="row">                             <!-- we have created row class-->
+      {% for p in product %}
+        {% if 'product' == p.categories %}
+      <div class="col-sm-4 ">      
+        <div class="card bed_categories_card bed_card" style="width: 22rem; height:30rem">
+        <a href="{% url "Productdetails" p.id %}"><img class="card-img-top " src="{{p.brand_image.url}}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h2 class="card-title">{{p.name}}</h2>
+            <h2 class="card-title">{{p.selling_price}} ₹</h2>
+          </div>
+        </div>
+      </div> 
+        {% endif %} 
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<br>
+<hr>
+<br>
+
+
+<div class="full-page-container">
+  <!--Smartphone division-->
+  <h1 align="center">Bundles</h1>
+  <div class="container " style="margin-top: 50px;"><!-- we have created new container class-->
+    <div class="row">                             <!-- we have created row class-->
+      {% for p in product %}
+      {% if 'bundle' == p.categories %}
+      <div class="col-sm-4 ">      
+        <div class="card bed_categories_card bed_card" style="width: 22rem; height:30rem">
+        <a href="{% url "Productdetails" p.id %}"><img class="card-img-top " src="{{p.brand_image.url}}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h4 class="card-title">{{p.name}}</h4>
+            <h4 class="card-title">{{p.selling_price}} ₹</h4>
+          </div>
+        </div>
+      </div> 
+      {% endif %} 
+      {% endfor %}
+    </div>
+  </div>
+</div>
+</body>
